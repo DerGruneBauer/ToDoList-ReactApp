@@ -1,0 +1,26 @@
+.container {
+    border-radius: 8px;
+    height: 60px;
+    width: 100%;
+    max-width: 650px;
+    background-color:  white;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    overflow-x: auto;
+}
+
+.newTodoCheckbox {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.newTodoInput {
+    border: none;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+    outline: none;
+    width: 100%;
+}

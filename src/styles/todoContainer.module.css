@@ -1,0 +1,11 @@
+.container {
+    position: relative;
+    height: auto;
+    width: 100%;
+    max-width: 650px;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 10px;
+}

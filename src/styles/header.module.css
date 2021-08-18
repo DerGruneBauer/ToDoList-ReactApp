@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 650px;
+}
+
+.toggleIcon {
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+}
