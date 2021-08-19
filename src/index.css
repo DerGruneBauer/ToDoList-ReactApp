@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+    cursor: default;
 }
 body {
     margin: 0;
@@ -16,4 +17,5 @@ body {
 
 .note {
     text-align: center;
+    color: gray;
 }

@@ -4,4 +4,33 @@
     height: 500px;
     max-height: 500px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 6px 16px 3px rgba(0,0,0,0.15);
 }
+
+.todoList {
+    overflow-y: auto;
+}
+
+.statsBar {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 8px 8px;
+    border-top: solid 2px rgb(228, 228, 228);
+    color: gray;
+    padding: 15px;
+}
+
+.clearButton:hover {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+    .statsBar {
+        padding: 15px 30px;
+    }
+  }

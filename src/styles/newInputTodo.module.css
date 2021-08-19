@@ -1,26 +1,40 @@
 .container {
-    border-radius: 8px;
-    height: 60px;
+    height: 55px;
     width: 100%;
     max-width: 650px;
-    background-color:  white;
     display: flex;
     align-items: center;
     padding: 10px 15px;
     overflow-x: auto;
+    border-radius: 8px;
+    background-color:  white;
+    box-shadow: 0px 6px 16px 3px rgba(0,0,0,0.15);
 }
 
 .newTodoCheckbox {
-    margin-right: 10px;
     height: 30px;
     width: 30px;
+    margin-right: 10px;
 }
 
 .newTodoInput {
-    border: none;
-    font-size: 18px;
+    width: 100%;
     position: relative;
+    border: none;
+    font-size: 16px;
     top: 2px;
     outline: none;
-    width: 100%;
 }
+
+.newTodoCheckbox:hover, .newTodoInput:hover {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        padding: 10px 25px;
+    }
+    .newTodoCheckbox {
+        margin-right: 15px;
+    }
+  }

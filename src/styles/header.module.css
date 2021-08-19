@@ -10,3 +10,7 @@
     width: 30px;
     background-repeat: no-repeat;
 }
+
+.toggleIcon:hover {
+    cursor: pointer;
+}

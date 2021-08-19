@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from '../styles/newInputTodo.module.css';
 
-const NewTodo = () => (
+const NewTodo = (props) => (
     <div className={styles.container}>
         <input type="radio" className={styles.newTodoCheckbox}/>
-        <input type="text" className={styles.newTodoInput} placeholder="Create a new todo..." />
+        <input onKeyUp={props.onKeyPress} type="text" className={styles.newTodoInput} placeholder="Create a new todo..." />
     </div>
 )
 
