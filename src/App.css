@@ -1,5 +1,5 @@
 .App {
-  background-color: hsl(0, 10%, 93%);
+  background-color: var(--mainBackgroundColor);
   height: 100%;
   width: 100%;
   padding: 40px 25px;
@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   z-index: 0;
-  background-color: hsl(233, 11%, 84%);
+  background-color: var(--bannerBackgroundColor);
   height: 30%;
   width: 100%;
 }

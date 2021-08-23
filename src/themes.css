@@ -1,0 +1,20 @@
+.lightTheme, :root {
+    --mainBackgroundColor: hsl(0, 10%, 93%);
+    --bannerBackgroundColor: hsl(233, 11%, 84%);
+    --containerBackgroundColor: white;
+    --boxShadow: rgba(0,0,0,0.15);
+    --headerTextColor: black;
+    --taskTextColor: black;
+    --taskBorderColor: rgb(228, 228, 228);
+    --secondaryText: gray;
+}
+
+.darkTheme {
+    --mainBackgroundColor: hsl(235, 21%, 11%);
+    --bannerBackgroundColor: hsl(237, 15%, 27%);
+    --containerBackgroundColor: hsl(235, 24%, 19%);
+    --headerTextColor: white;
+    --taskTextColor: hsl(234, 39%, 85%);
+    --taskBorderColor: hsl(237, 14%, 26%);
+    --secondaryText: hsl(233, 14%, 35%);
+}

@@ -13,6 +13,7 @@ const ListTodo = (props) => {
             key={task.id}
             taskName={task.taskName}
             isCompleted={task.isCompleted}
+            onCompleteTask={props.onCompleteTask}
           />
         ))}
       </div>
@@ -20,7 +21,7 @@ const ListTodo = (props) => {
         <div className={styles.itemsLeft}>
           {props.taskList.length} items left
         </div>
-        <div className={styles.clearButton}>Clear Completed</div>
+        <div onClick={props.onClearClick} className={styles.clearButton}>Clear Completed</div>
       </div>
     </div>
   );

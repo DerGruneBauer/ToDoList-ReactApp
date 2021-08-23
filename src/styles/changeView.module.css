@@ -1,10 +1,10 @@
 .container {
     width: 100%;
     height: 55px;
-    background-color: white;
+    background-color: var(--containerBackgroundColor);
     border-radius: 8px;
     margin-bottom: 30px;
-    color: gray;
+    color: var(--secondaryText);
     display: flex;
     align-items: center;
     justify-content: center;

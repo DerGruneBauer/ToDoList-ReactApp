@@ -17,5 +17,5 @@ body {
 
 .note {
     text-align: center;
-    color: gray;
+    color: var(--secondaryText);
 }

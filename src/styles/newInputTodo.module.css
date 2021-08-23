@@ -7,14 +7,16 @@
     padding: 10px 15px;
     overflow-x: auto;
     border-radius: 8px;
-    background-color:  white;
+    background-color:  var(--containerBackgroundColor);
     box-shadow: 0px 6px 16px 3px rgba(0,0,0,0.15);
 }
 
 .newTodoCheckbox {
     height: 30px;
-    width: 30px;
+    width: 34.5px;
     margin-right: 10px;
+    border: solid gray 1px;
+    border-radius: 50%;
 }
 
 .newTodoInput {
@@ -24,6 +26,8 @@
     font-size: 16px;
     top: 2px;
     outline: none;
+    background-color: var(--containerBackgroundColor);
+    color: var(--taskTextColor);
 }
 
 .newTodoCheckbox:hover, .newTodoInput:hover {
