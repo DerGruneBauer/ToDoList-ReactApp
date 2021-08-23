@@ -3,6 +3,7 @@ import styles from "../styles/listTodos.module.css";
 import IndividualTodo from "./todoIndividual";
 
 const ListTodo = (props) => {
+
   return (
     <div className={styles.container}>
       <div className={styles.todoList}>
@@ -16,6 +17,7 @@ const ListTodo = (props) => {
             onCompleteTask={props.onCompleteTask}
           />
         ))}
+        <div className={styles.spacer}></div>
       </div>
       <div className={styles.statsBar}>
         <div className={styles.itemsLeft}>

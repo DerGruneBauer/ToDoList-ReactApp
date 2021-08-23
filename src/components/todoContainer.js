@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from '../styles/todoContainer.module.css'
 import ChangeView from "./changeView";
 import Header from './header';
 import ListTodo from "./listTodos";
 import NewTodo from "./newTodoInput";
+import checkIcon from '../images/icon-check.svg';
 
 const TodoContainer = (props) => {
 
@@ -15,36 +16,28 @@ const TodoContainer = (props) => {
         index > -1 ? setTasks(tasks.filter(task => id !== task.id)) : console.log("invalid index");
         setVisibleTasks(tasks.filter(task => id !== task.id));
     }
-
+    
     const updateTask = id => {
         const updatedTasks = tasks.map(task => {
-            if (id === task.id){
+            if (task.id === id){
                 return {...task, isCompleted: !task.isCompleted}
             }
             return task;
         });
-
         setTasks(updatedTasks);
-        // setVisibleTasks(updatedTasks);
     }
-
     const clearCompletedTasks = () => {
         const updatedTasks = tasks.filter(task => !task.isCompleted);
         setTasks(updatedTasks);
+        setVisibleTasks([]);
     }
 
     const showCompletedTasks = () => {
-        // const completedTasks = tasks.filter(task => task.isCompleted);
-        // setTasks(completedTasks);
-        setVisibleTasks(tasks.filter(task => task.isCompleted));
-        
-        
+        setVisibleTasks(tasks.filter(task => task.isCompleted));   
     }
 
     const showActiveTasks = () => {
-        // const activeTasks = tasks.filter(task => !task.isCompleted);
         setVisibleTasks(tasks.filter(task => !task.isCompleted));
-        // setTasks(activeTasks);
     }
 
     const showAllTasks = () => {
@@ -73,7 +66,7 @@ const TodoContainer = (props) => {
         <Header toggleTheme={props.toggleTheme} />
         <NewTodo onKeyPress={handleKeyPress} />
         <ListTodo onClearClick={clearCompletedTasks} onCompleteTask={updateTask} onDeleteClick={deleteTask} taskList={visibleTasks}/>
-        <ChangeView onActiveClick={showActiveTasks} onCompletedClick={showCompletedTasks} onAllClick={showAllTasks}/>
+        <ChangeView onActiveClick={showActiveTasks} onCompletedClick={showCompletedTasks} onAllClick={showAllTasks} taskList={visibleTasks}/>
     </div>
     );
 }

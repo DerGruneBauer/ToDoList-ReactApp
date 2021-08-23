@@ -4,14 +4,17 @@ import deleteIcon from "../images/icon-cross.svg";
 
 const IndividualTodo = (props) => {
 
-  const onComplete = e => {
-    if(props.isCompleted) {
-      e.target.classList.remove(styles.uncompletedCheckbox);
-      e.target.classList.add(styles.completedCheckbox);
+  const onComplete = (e) => {
+    let target = e.target.classList;
+    if(!props.isCompleted) {
+      target.remove(styles.uncompletedCheckbox);
+      target.add(styles.completedCheckbox);
     } else {
-      e.target.classList.remove(styles.completedCheckbox);
+      target.remove(styles.completedCheckbox);
     }
   }
+  
+  const styleCheckbox = props.isCompleted ? styles.completedCheckbox : styles.uncompletedCheckbox;
 
   return (
     <div className={styles.container}>
@@ -20,7 +23,8 @@ const IndividualTodo = (props) => {
           onClick={(e) => {
             onComplete(e); props.onCompleteTask(props.id);
           }}
-          className={`${styles.newTodoCheckbox} ${styles.uncompletedCheckbox}`}
+          draggable="true"
+          className={`${styles.newTodoCheckbox} ${styleCheckbox}`}
         />
         <div className={styles.taskName}>{props.taskName}</div>
       </div>
