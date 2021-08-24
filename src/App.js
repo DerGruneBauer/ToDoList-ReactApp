@@ -16,7 +16,7 @@ const App = () => {
     <div className={`App ${theme}`}>
       <div className="banner"></div>
       <TodoContainer toggleTheme={toggleTheme}></TodoContainer>
-      <div className="note">Drag and drop to reorder list</div>
+      {/* <div className="note">Drag and drop to reorder list</div> */}
     </div>
   );
 }
